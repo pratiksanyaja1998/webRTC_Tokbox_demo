@@ -1,0 +1,7 @@
+{
+  "name": "getcommunicate",
+  "minimum-stability":"dev",
+  "require": {
+    "opentok/opentok": "dev-master"
+  }
+}

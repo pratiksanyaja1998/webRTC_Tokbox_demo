@@ -1,0 +1,30 @@
+
+
+https://wn3pom.axshare.com/#g=1
+
+https://tokbox.com/developer/tutorials/web/text-chat/
+
+
+
+session.on("streamDestroyed", function(event) {
+            // console.log("Stream .............." + event.stream.name + " ended. " + event.reason);
+            subscribers--; 
+            if(!isMobile.matches){
+                if(subscribers==2){
+                    $('.OT_subscriber').css("width", "50%");
+                    $('.OT_subscriber').css("height", "100%");
+                } else if(subscribers>2){
+                    $('.OT_subscriber').css("width", "50%");
+                    $('.OT_subscriber').css("height", "50%");
+                }else if(subscribers==1){
+                    $('.OT_subscriber').css("width", "100%");
+                    $('.OT_subscriber').css("height", "100%");
+                }
+            }
+            if(isMobile.matches){
+                var pxs= subscribers*250;
+                $('#textchat').css("margin-top",pxs.toString()+"px");
+            }
+}).connect(token);
+
+
